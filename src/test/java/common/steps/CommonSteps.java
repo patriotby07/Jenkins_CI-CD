@@ -9,6 +9,7 @@ import org.testng.Assert;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
+import static common.logger.CustomLogger.logger;
 
 public class CommonSteps {
 
@@ -28,6 +29,7 @@ public class CommonSteps {
             getAndAttachScreenshot();
             Assert.fail("Actual URL: " + url() + "\n" + "Expected URL: " + mustContains);
         }
+        logger.info("ok");
     }
 
     @SuppressWarnings("UnusedReturnValue")

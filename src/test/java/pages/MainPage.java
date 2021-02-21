@@ -6,6 +6,7 @@ import org.testng.Assert;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static common.logger.CustomLogger.logger;
 
 public class MainPage {
     SelenideElement languageEnglish = $(byXpath("//a[@class='link-box']//strong[text()='English']"));
@@ -14,11 +15,13 @@ public class MainPage {
     @Step
     public void pressButtonWithLanguageEnglish() {
         languageEnglish.click();
+        logger.info("ok");
     }
 
     @Step
     public void pressButtonWithLanguage(String countryCode) {
         $(byXpath(prepareLanguageXPath + "'" + transformCountryCodeToLanguage(countryCode) + "']")).click();
+        logger.info("ok");
     }
 
     @Step
