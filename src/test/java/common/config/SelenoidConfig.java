@@ -17,6 +17,7 @@ public class SelenoidConfig {
         Configuration.reportsFolder = "target/screenshots";
         Configuration.browserVersion = "88";
         Configuration.clickViaJs = true;
+        Configuration.baseUrl = "";
         Configuration.browserCapabilities.setCapability("enableVNC", false);
         Configuration.browserCapabilities.setCapability("enableVideo", false);
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
