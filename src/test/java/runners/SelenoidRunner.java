@@ -12,9 +12,6 @@ public class SelenoidRunner {
     @Parameters({"BROWSER"})
     @BeforeClass(alwaysRun = true)
     public void setUp(@Optional("Chrome") String browser) {
-        if (browser.equals("{$BROWSER}")) {
-            browser = "Chrome";
-        }
         System.out.println(browser);
         SelenoidConfig selenoidConfig = new SelenoidConfig();
         selenoidConfig.createWebDriverInstance(browser);
