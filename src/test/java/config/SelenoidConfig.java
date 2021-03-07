@@ -9,7 +9,7 @@ import static logger.CustomLogger.logger;
 
 public class SelenoidConfig {
     public void createWebDriverInstance(String browser) {
-        if (browser.equals("{$BROWSER}")) {
+        if (browser.equals("${BROWSER}")) {
             browser = "Chrome";
         }
         if (browser.equals("Chrome")) {
