@@ -1,6 +1,6 @@
 package pages;
 
-import common.runners.SelenoidRunner;
+import runners.SelenoidRunner;
 import steps.ActionsWithOurMultipleWebElements;
 import steps.ActionsWithOurWebElements;
 

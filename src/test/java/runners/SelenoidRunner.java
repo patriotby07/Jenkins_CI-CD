@@ -1,7 +1,7 @@
-package common.runners;
+package runners;
 
 import com.codeborne.selenide.Selenide;
-import common.config.SelenoidConfig;
+import config.SelenoidConfig;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 

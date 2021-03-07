@@ -1,6 +1,6 @@
 package tests;
 
-import common.test_data.Links;
+import test_data.Links;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;

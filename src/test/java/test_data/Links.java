@@ -1,4 +1,4 @@
-package common.test_data;
+package test_data;
 
 public enum Links {
     WIKIPEDIA_MAIN_PAGE("https://www.wikipedia.org/");

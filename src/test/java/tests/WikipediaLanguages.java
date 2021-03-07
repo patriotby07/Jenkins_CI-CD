@@ -1,13 +1,13 @@
 package tests;
 
-import common.test_data.Links;
+import test_data.Links;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.BasePage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static common.steps.CommonSteps.checkUrl;
+import static steps.CommonSteps.checkUrl;
 
 public class WikipediaLanguages extends BasePage {
 

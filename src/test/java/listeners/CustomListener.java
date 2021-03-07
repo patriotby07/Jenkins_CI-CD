@@ -1,10 +1,10 @@
-package common.listeners;
+package listeners;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static common.logger.CustomLogger.logger;
+import static logger.CustomLogger.logger;
 
 public class CustomListener implements ITestListener {
 

@@ -1,11 +1,11 @@
-package common.config;
+package config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import static common.logger.CustomLogger.logger;
+import static logger.CustomLogger.logger;
 
 public class SelenoidConfig {
     public void createWebDriverInstance() {

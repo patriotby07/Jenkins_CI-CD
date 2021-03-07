@@ -1,6 +1,6 @@
-package common.listeners;
+package listeners;
 
-import common.config.RetryConfig;
+import config.RetryConfig;
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.ITestAnnotation;

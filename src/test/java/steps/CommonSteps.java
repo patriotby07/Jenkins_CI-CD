@@ -1,4 +1,4 @@
-package common.steps;
+package steps;
 
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -9,7 +9,7 @@ import org.testng.Assert;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static common.logger.CustomLogger.logger;
+import static logger.CustomLogger.logger;
 
 public class CommonSteps {
 
