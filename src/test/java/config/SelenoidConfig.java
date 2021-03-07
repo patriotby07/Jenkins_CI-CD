@@ -9,14 +9,16 @@ import static logger.CustomLogger.logger;
 
 public class SelenoidConfig {
     public void createWebDriverInstance(String browser) {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        if (browser.equals("Chrome")) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-notifications");
+            Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
+            Configuration.browserVersion = "88";
+        }
         Configuration.browser = browser;
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.timeout = 30000;
         Configuration.reportsFolder = "target/screenshots";
-        Configuration.browserVersion = "88";
         Configuration.clickViaJs = true;
         Configuration.startMaximized = true;
         Configuration.baseUrl = "";

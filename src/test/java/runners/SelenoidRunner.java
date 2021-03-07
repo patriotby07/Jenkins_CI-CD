@@ -15,6 +15,7 @@ public class SelenoidRunner {
         if (browser.equals("{$BROWSER}")) {
             browser = "Chrome";
         }
+        System.out.println(browser);
         SelenoidConfig selenoidConfig = new SelenoidConfig();
         selenoidConfig.createWebDriverInstance(browser);
     }
