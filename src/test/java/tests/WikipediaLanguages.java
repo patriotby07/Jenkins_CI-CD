@@ -22,7 +22,7 @@ public class WikipediaLanguages extends BasePage {
     public void openMainPage() {
         open(Links.WIKIPEDIA_MAIN_PAGE.getUrl());
     }
-
+//test
     @Test
     public void checkLanguageEnglish() {
         mainPage.pressButtonWithLanguageEnglish();
