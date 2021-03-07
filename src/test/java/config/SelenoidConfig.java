@@ -8,18 +8,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import static logger.CustomLogger.logger;
 
 public class SelenoidConfig {
-    public void createWebDriverInstance(String browser) {
-        if (browser.equals("${BROWSER}")) {
-            browser = "Chrome";
-        }
-        if (browser.equals("Chrome")) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--disable-notifications");
-            Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
-            Configuration.browserVersion = "88";
-        }
-        System.out.println(browser);
-        Configuration.browser = browser;
+    public void createWebDriverInstance() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
+        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        Configuration.browserVersion = "88";
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.timeout = 30000;
         Configuration.reportsFolder = "target/screenshots";
