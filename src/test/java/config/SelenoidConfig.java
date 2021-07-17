@@ -16,7 +16,6 @@ public class SelenoidConfig {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-notifications");
             Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
-            Configuration.browserVersion = "89";
         }
         Configuration.browser = browser;
         Configuration.remote = "http://localhost:4444/wd/hub";
