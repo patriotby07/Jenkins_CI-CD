@@ -10,7 +10,7 @@ public class Debug {
     @BeforeClass(alwaysRun = true)
     public void setUp() {
         Configuration.timeout = 30000;
-        Configuration.startMaximized = true;
+        Configuration.browserSize = "1920x1080";
     }
 
     @AfterMethod(alwaysRun = true)

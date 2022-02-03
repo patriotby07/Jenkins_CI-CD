@@ -19,11 +19,9 @@ public class SelenoidConfig {
         }
         Configuration.browser = browser;
         Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.timeout = 30000;
+        Configuration.timeout = 20000;
         Configuration.reportsFolder = "target/screenshots";
-        Configuration.clickViaJs = true;
-        Configuration.startMaximized = true;
-        Configuration.baseUrl = "";
+        Configuration.browserSize = "1920x1080";
         Configuration.browserCapabilities.setCapability("enableVNC", false);
         Configuration.browserCapabilities.setCapability("enableVideo", false);
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
