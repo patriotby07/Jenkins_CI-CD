@@ -6,12 +6,26 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
 import static logger.CustomLogger.logger;
 
 public class CommonSteps {
+
+    @Step
+    public static void clickTheElementByTagAndText(String tag, String text) {
+        $(byXpath("//" + tag + "[text()='" + text + "']")).click();
+        logger.info(text + " - ok");
+    }
+
+    @Step
+    public static void clickTheElementByTagAndText(String tag, String text, int index) {
+        $(byXpath("(//" + tag + "[text()='" + text + "'])[" + index + "]")).click();
+        logger.info(text + " - ok");
+    }
 
     @Step
     public static void checkUrl(String mustContains, int timeOut) {

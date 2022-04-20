@@ -1,11 +1,11 @@
 package test_data;
 
-public enum Links {
+public enum Urls {
     WIKIPEDIA_MAIN_PAGE("https://www.wikipedia.org/");
 
     private final String url;
 
-    Links(String url) {
+    Urls(String url) {
         this.url = url;
     }
 
